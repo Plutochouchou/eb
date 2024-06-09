@@ -1,0 +1,171 @@
+.container {
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px !important;
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 30px;
+  align-items: center;
+}
+
+.container .content form {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+.container .content .top h1 {
+  font-size: 40px;
+  margin-bottom: unset;
+}
+
+.container .content .top p {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.container .content .top p a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.container .content .mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.container .content .mainContent .main_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .content .mainContent label {
+  color: #747474;
+  font-size: 15px;
+}
+
+.container .content .mainContent input {
+  font-size: 20px;
+  border: unset;
+  border: solid #f4f4f4 2px;
+  border-radius: 0.5rem;
+  padding: 15px 10px;
+  color: #747474;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.container .content .bottom #signIn {
+  border: unset;
+  border-radius: 1.8rem;
+  width: fit-content;
+  background-color: #f84445;
+  color: white;
+  padding: 15px 20px;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.container .content .bottom #signIn:hover {
+  opacity: 0.9;
+}
+
+.showpass {
+  display: flex;
+}
+
+#showPass {
+  width: 5%;
+  height: 60%;
+  margin: auto;
+}
+
+/*------ Settings ------*/
+.showpassword {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+  right: 5%;
+}
+
+.showpassword .eye {
+  position: absolute;
+  animation: keyframes-fill 0.5s;
+}
+
+.showpassword .eye-slash {
+  position: absolute;
+  animation: keyframes-fill 0.5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.showpassword input:checked ~ .eye {
+  display: none;
+}
+
+.showpassword input:checked ~ .eye-slash {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.showpassword input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+#signInGoogle {
+  background-color: white;
+  display: flex;
+  cursor: pointer;
+  width: 32%;
+  height: 1%;
+  align-items: center;
+  gap: 10%;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  justify-content: center;
+  transition: 0.8s;
+}
+
+#signInGoogle:hover {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+#googleimg {
+  width: 10%;
+  height: auto;
+}
